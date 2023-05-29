@@ -1,0 +1,74 @@
+{
+    "name": "Shamallows (marshmallow paste)",
+    "type": "dessert",
+    "number of people": 12,
+    "total_time": "2h22",
+    "baking_time": "7min",
+    "preparation_time": "15min",
+    "ingredients": [
+        {
+            "name": "Egg whites",
+            "quantity": 3,
+            "unit": "Egg/g",
+            "note": "110 g"
+        },
+        {
+            "name": "Crystallized sugar",
+            "unit": "g",
+            "note": "500 g"
+        },
+        {
+            "name": "Water",
+            "unit": "ml/g",
+            "note": "200 ml/g"
+        },
+        {
+            "name": "Gelatin",
+            "unit": "g",
+            "note": "34 g"
+        },
+        {
+            "name": "Honey",
+            "unit": "g",
+            "note": "30 g"
+        },
+        {
+            "name": "orange blossom water or other flavoring (strawberry orange lemon vanilla rose raspberry)",
+            "unit": "ml/g",
+            "note": "50 ml/g"
+        },
+        {
+            "name": "icing sugar",
+            "unit": "g",
+            "note": "50 g"
+        },
+        {
+            "name": "cornstarch",
+            "unit": "g",
+            "note": "50 g"
+        }
+    ],
+    "steps": [
+        {
+            "step1": "Using a paper towel, coat a 30x20x4 cm mould with a little oil. Evenly line with equal quantities of powdered sugar and cornstarch. Remove any excess. Soften the gelatine sheets in a bowl of cold water. Small individual molds can be used, to be filled with the mixture using a piping bag."
+        },
+        {
+            "step2": "Whisk the egg whites until stiff, adding a little lemon juice and 40g of sugar halfway through (it's best to use whites that are a few days old, as fresh whites don't rise well; if possible, leave the unbeaten whites in a filmed container for a few hours before beating)."
+        },
+        {
+            "step3": "Place the sugar, honey and water in a saucepan and cook at 121°C (approx. 7 minutes from the time the sugar rises). A little sugar soaked in cold water will help form a firm ball that is not too sticky (boulé cooking)."
+        },
+        {
+            "step4": "While the sugar is cooking, place 3 tablespoons of flavoring in a saucepan, add the gelatin and gently liquefy (never boil). When the sugar is cooked, turn off the heat and pour the gelatine into the cooked sugar. Stir for a few seconds to mix well."
+        },
+        {
+            "step5": "Pour the boiling sugar in a thin stream over the egg whites (between the sides of the bowl and the blades of the whisk, to avoid splashing) and continue beating until cooled (approx. 10 minutes). The whisk should leave clear marks that close quickly, but do not cool too much, as the mixture must be pourable."
+        },
+        {
+            "step6": "Pour the mixture into the mold and refrigerate for 2 hours. For use with a piping bag, chill the mixture less to keep it more fluid."
+        },
+        {
+            "final_step": "Lorsque la masse est bien ferme, la sortir du frigo, la saupoudrer du mélange sucre glace/Maïzena, la mettre sur le plan de travail et la détailler au choix. Tremper les morceaux dans le mélange pour bien les enrober. Éliminer le surplus."
+        }
+    ]
+}
