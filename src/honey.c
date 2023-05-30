@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2023
+** PROJECT, 2023
 ** honey
 ** File description:
 ** honey
@@ -22,4 +22,5 @@ int honey(char *file)
     fd = open(file, O_RDONLY);
     read(fd, buffer, s.st_size);
     buffer[s.st_size] = '\0';
+    return 0;
 }

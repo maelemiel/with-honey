@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2023
+** PROJECT, 2023
 ** honey
 ** File description:
 ** honey
