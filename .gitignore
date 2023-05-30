@@ -35,13 +35,14 @@
 *.i*86
 *.x86_64
 *.hex
-*honey
+honey
 
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
+unit_tests
 
 # Kernel Module Compile Results
 *.mod*
