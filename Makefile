@@ -8,9 +8,13 @@
 MAIN 		=   src/main.c					\
 
 FILES		=	honey.c      				\
+				manage_args.c 				\
 				take_number_of_honey.c 		\
+				verif_arguments.c			\
 
-TEST_FILES 	=  	test_main.c
+TEST_FILES 	=  	test_args.c					\
+				test_manage_args.c 			\
+				test_print_help.c 			\
 
 SRCDIR 		= 	src/
 TEST_DIR	=	tests/
@@ -42,7 +46,7 @@ fclean: clean
 	@rm -f $(NAMETEST)
 
 tests_run:	$(OBJ)
-	gcc -o $(NAMETEST) $(TEST_SRC) $(OBJTEST) -I./includes -lcriterion
+	gcc -o $(NAMETEST) $(TEST_SRC) $(OBJTEST) $(CFLAGS_TEST)
 	./$(NAMETEST)
 
 re:	fclean	all
