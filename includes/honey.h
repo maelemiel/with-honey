@@ -13,3 +13,6 @@ int honey(char *file);
 char* verif_number_of_honey(char *nb);
 int manage_number_of_honey(char *nb);
 int transform_nb(char *nb);
+int verif_args(int ac);
+char* verif_units(char* av);
+int manage_args(int ac, char** av);
