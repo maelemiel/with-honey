@@ -22,8 +22,14 @@ int verif_args(int ac)
 int print_help(char** av)
 {
     if (av[1][0] == '-' && av[1][1] == 'h') {
-        printf("USAGE\n\t./honey number of grams of honey \n\nDESCRIPTION\n\t"
-        "once done, recipes will be proposed to you\n\n");
+        printf("USAGE\n");
+        printf("\t./honey [number] [unit]\n\n");
+        printf("DESCRIPTION\n");
+        printf("\tnumber\t\ta number of units\n");
+        printf("\tunit\t\ta unit among g, kg, l, cl, ml\n");
+        printf("\n");
+        printf("EXAMPLE\n");
+        printf("\t./honey 42 kg\n");
         exit (0);
     }
     return 0;
