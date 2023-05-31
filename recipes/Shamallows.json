@@ -1,6 +1,7 @@
 {
     "name": "Shamallows (marshmallow paste)",
     "type": "dessert",
+    "difficulty": "easy",
     "number of people": 12,
     "total_time": "2h22",
     "baking_time": "7min",
