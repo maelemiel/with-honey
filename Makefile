@@ -7,7 +7,7 @@
 
 MAIN 		=   src/main.c					\
 
-FILES		=	honey.c      				\
+FILES		=	parser/take_file.c      				\
 				manage_args.c 				\
 				take_number_of_honey.c 		\
 				verif_arguments.c			\
