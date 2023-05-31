@@ -16,3 +16,4 @@ int transform_nb(char *nb);
 int verif_args(int ac);
 char* verif_units(char* av);
 int manage_args(int ac, char** av);
+int print_honey(char **av);
