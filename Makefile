@@ -13,7 +13,7 @@ FILES		=	parser/take_file.c      				\
 				verif_arguments.c			\
 
 TEST_FILES 	=  	test_args.c					\
-				test_manage_args.c 			\
+				test_print_args.c 			\
 				test_print_help.c 			\
 
 SRCDIR 		= 	src/
