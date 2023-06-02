@@ -10,26 +10,30 @@
 #include "honey.h"
 #include "struct.h"
 
-static void inti_struct(parser_t *parser)
+static void init_struct(parser_t *parser)
 {
     parser->recipe = malloc(sizeof(struct Recipe));
+    parser->ingredient = malloc(sizeof(struct Ingredient));
     parser->recipe->name = NULL;
-    parser->recipe->ingredients = NULL;
-    parser->recipe->preparation = NULL;
-    parser->recipe->cooking = NULL;
-    parser->recipe->rest = NULL;
-    parser->recipe->nb = NULL;
-    parser->recipe->unit = NULL;
-    parser->recipe->time = NULL;
-    parser->recipe->difficulty = NULL;
-    parser->recipe->price = NULL;
     parser->recipe->type = NULL;
+    parser->recipe->difficulty = NULL;
+    parser->recipe->nb_people = NULL;
+    parser->recipe->total_time = NULL;
+    parser->recipe->cooking_time = NULL;
+    parser->recipe->prep_time = NULL;
+    parser->recipe->price = NULL;
+    parser->recipe->ingredients = NULL;
+    parser->ingredient->name = NULL;
+    parser->ingredient->quantity = NULL;
+    parser->ingredient->unit = NULL;
+    parser->ingredient->nb = NULL;
+    parser->ingredient->nb_ingredient = 0;
 }
 
 int main(int ac, char** av)
 {
     parser_t *parser = malloc(sizeof(parser_t));
-    inti_struct(parser);
+    init_struct(parser);
     manage_args(ac, av);
     return 0;
 }
