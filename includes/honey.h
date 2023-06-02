@@ -17,3 +17,6 @@ int verif_args(int ac);
 char* verif_units(char* av);
 int manage_args(int ac, char** av);
 int print_honey(char **av);
+int my_count_words(const char *str, const char * delim);
+char **split_string(const char *str, const char* delim);
+int parse_file(char *file, char *path_folder);
