@@ -7,7 +7,12 @@
 
 MAIN 		=   src/main.c					\
 
-FILES		=	parser/take_file.c      				\
+LIB			=	lib/my_count_words.c 		\
+				lib/split_string.c 			\
+
+FILES		=	parser/take_file.c      	\
+				parser/count_steps.c 		\
+				parser/count_ingredient.c 	\
 				manage_args.c 				\
 				take_number_of_honey.c 		\
 				verif_arguments.c			\
@@ -22,6 +27,7 @@ SRC 		=	$(addprefix $(SRCDIR), $(FILES))
 TEST_SRC	=	$(addprefix $(TEST_DIR), $(TEST_FILES))
 MAIN_OBJ 	=	$(MAIN:.c=.o)
 OBJ			= 	$(SRC:.c=.o)
+OBJLIB		=	$(LIB:.c=.o)
 OBJTEST 	= 	$(SRC:%.c=%.o)
 
 
@@ -32,20 +38,21 @@ NAMETEST 	= 	unit_tests
 CFLAGS	   +=   -g -I./includes -W -Wall -Wextra
 CFLAGS_TEST	=	$(CFLAGS) -lcriterion
 
-$(NAME): 	 $(OBJ) $(MAIN_OBJ)
-	@gcc -o $(NAME) $(OBJ) $(MAIN_OBJ) $(CFLAGS)
+$(NAME): 	 $(OBJ) $(OBJLIB) $(MAIN_OBJ)
+	@gcc -o $(NAME) $(OBJ) $(OBJLIB) $(MAIN_OBJ) $(CFLAGS)
 
 all:	$(NAME)
 
 clean:
 	@rm -f $(OBJ)
+	@rm -f $(OBJLIB)
 	@rm -f $(MAIN_OBJ)
 
 fclean: clean
 	@rm -f $(NAME)
 	@rm -f $(NAMETEST)
 
-tests_run:	$(OBJ)
+tests_run:	$(OBJ) $(OBJLIB)
 	gcc -o $(NAMETEST) $(TEST_SRC) $(OBJTEST) $(CFLAGS_TEST)
 	./$(NAMETEST)
 
