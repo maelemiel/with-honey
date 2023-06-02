@@ -37,10 +37,10 @@ int parse_file(char *file, char *path_folder)
     int fd = 0;
     char *buffer = NULL;
     char *fwd = malloc(sizeof(char) * 10000);
+
     strcat(fwd, path_folder);
     strcat(fwd, "/");
     strcat(fwd, file);
-
     printf("%s\n", fwd);
     stat(fwd, &s);
     buffer = malloc(sizeof(char) * (s.st_size + 1));
