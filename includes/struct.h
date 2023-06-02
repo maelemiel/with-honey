@@ -9,19 +9,32 @@
 
 typedef struct parser {
     struct Recipe *recipe;
-
+    struct Ingredient *ingredient;
+    struct Steps *steps;
+    int *nb_of_file;
 } parser_t;
 
 struct Recipe {
+    char *name;
+    char *type;
+    char *difficulty;
+    char *nb_people;
+    char *total_time;
+    char *prep_time;
+    char *cooking_time;
+    char *price;
+    char *ingredients;
+};
+
+struct Ingredient {
     char **name;
-    char **ingredients;
-    char **preparation;
-    char **cooking;
-    char **rest;
     char **nb;
     char **unit;
-    char **time;
-    char **difficulty;
-    char **price;
-    char **type;
+    char **quantity;
+    int nb_ingredient;
+};
+
+struct Steps {
+    char **steps;
+    int nb_steps;
 };
