@@ -6,47 +6,48 @@
     "total_time": "2h22",
     "baking_time": "7min",
     "preparation_time": "15min",
+    "price": "?",
     "ingredients": [
         {
             "name": "Egg whites",
             "quantity": 3,
             "unit": "Egg/g",
-            "note": "110 g"
+            "nb": "110 g"
         },
         {
             "name": "Crystallized sugar",
             "unit": "g",
-            "note": "500 g"
+            "nb": "500 g"
         },
         {
             "name": "Water",
             "unit": "ml/g",
-            "note": "200 ml/g"
+            "nb": "200 ml/g"
         },
         {
             "name": "Gelatin",
             "unit": "g",
-            "note": "34 g"
+            "nb": "34 g"
         },
         {
             "name": "Honey",
             "unit": "g",
-            "note": "30 g"
+            "nb": "30 g"
         },
         {
             "name": "orange blossom water or other flavoring (strawberry orange lemon vanilla rose raspberry)",
             "unit": "ml/g",
-            "note": "50 ml/g"
+            "nb": "50 ml/g"
         },
         {
             "name": "icing sugar",
             "unit": "g",
-            "note": "50 g"
+            "nb": "50 g"
         },
         {
             "name": "cornstarch",
             "unit": "g",
-            "note": "50 g"
+            "nb": "50 g"
         }
     ],
     "steps": [
