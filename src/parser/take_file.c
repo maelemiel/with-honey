@@ -18,7 +18,6 @@
 
 int check_file_in_the_folder(char *path_folder, parser_t *parser)
 {
-    int nb = 0;
     struct dirent *dir;
     DIR *d = opendir(path_folder);
         while ((dir = readdir(d)) != NULL) {
