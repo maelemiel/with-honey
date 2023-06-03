@@ -1,26 +1,26 @@
 /*
-** PROJECT, 2023
+**  PROJECT, 2023
 ** lib
 ** File description:
 ** my_count_words
 */
 
-#include <string.h>
+#include "lib.h"
 
 int my_count_words(const char *str, const char * delim)
 {
     int count = 0;
-    int len = strlen(str);
+    int len = my_strlen(str);
     int i = 0;
     while (i < len) {
-        while (i < len && strchr(delim, str[i]) != NULL) {
+        while (i < len && my_strchr(delim, str[i]) != NULL) {
             i++;
         }
         if (i == len) {
             break;
         }
         count++;
-        while (i < len && strchr(delim, str[i]) == NULL) {
+        while (i < len && my_strchr(delim, str[i]) == NULL) {
             i++;
         }
     }
