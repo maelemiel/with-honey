@@ -14,7 +14,6 @@
 #include <dirent.h>
 #include "honey.h"
 #include "struct.h"
-#include "lib.h"
 
 int check_file_in_the_folder(char *path_folder, parser_t *parser)
 {
@@ -56,7 +55,7 @@ int parse_file(char *file, char *path_folder, parser_t *parser)
 
 int parse_string(char *buffer)
 {
-    char **split_buffer = malloc(sizeof(char *) * 100000);
+    char **split_buffer = malloc(sizeof(char *) * strlen(buffer));
 
     split_buffer = split_string(buffer, "\n");
     printf("split buffer 0 : %s\n", split_buffer[0]);
