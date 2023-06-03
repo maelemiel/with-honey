@@ -7,9 +7,6 @@
 
 MAIN 		=   src/main.c					\
 
-LIB			=	lib/my_count_words.c 		\
-				lib/split_string.c 			\
-
 FILES		=	parser/take_file.c      	\
 				parser/count_steps.c 		\
 				parser/count_ingredient.c 	\
@@ -30,30 +27,33 @@ OBJ			= 	$(SRC:.c=.o)
 OBJLIB		=	$(LIB:.c=.o)
 OBJTEST 	= 	$(SRC:%.c=%.o)
 
+L 		=  -L./lib/phoenix/ -lphoenix
 
 NAME		= 	honey
 
 NAMETEST 	= 	unit_tests
 
-CFLAGS	   +=   -g -I./includes -W -Wall -Wextra
+CFLAGS	   +=   -g -I./includes -W -Wall -Wextra -I./lib/phoenix
 CFLAGS_TEST	=	$(CFLAGS) -lcriterion
 
-$(NAME): 	 $(OBJ) $(OBJLIB) $(MAIN_OBJ)
-	@gcc -o $(NAME) $(OBJ) $(OBJLIB) $(MAIN_OBJ) $(CFLAGS)
+$(NAME): 	 $(OBJ) $(MAIN_OBJ)
+	make -C lib/phoenix
+	@gcc -o $(NAME) $(OBJ) $(MAIN_OBJ) $(CFLAGS) $(L)
 
 all:	$(NAME)
 
 clean:
 	@rm -f $(OBJ)
-	@rm -f $(OBJLIB)
 	@rm -f $(MAIN_OBJ)
+	make clean -C lib/phoenix
 
 fclean: clean
 	@rm -f $(NAME)
 	@rm -f $(NAMETEST)
+	make fclean -C lib/phoenix
 
-tests_run:	$(OBJ) $(OBJLIB)
-	gcc -o $(NAMETEST) $(TEST_SRC) $(OBJTEST) $(CFLAGS_TEST)
+tests_run:	$(OBJ)
+	gcc -o $(NAMETEST) $(TEST_SRC) $(OBJTEST) $(CFLAGS_TEST) $(L)
 	./$(NAMETEST)
 
 re:	fclean	all
