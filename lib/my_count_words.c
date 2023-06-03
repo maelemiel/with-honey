@@ -5,22 +5,23 @@
 ** my_count_words
 */
 
-#include "lib.h"
+#include <stdlib.h>
+#include <string.h>
 
 int my_count_words(const char *str, const char * delim)
 {
     int count = 0;
-    int len = my_strlen(str);
+    int len = strlen(str);
     int i = 0;
     while (i < len) {
-        while (i < len && my_strchr(delim, str[i]) != NULL) {
+        while (i < len && strchr(delim, str[i]) != NULL) {
             i++;
         }
         if (i == len) {
             break;
         }
         count++;
-        while (i < len && my_strchr(delim, str[i]) == NULL) {
+        while (i < len && strchr(delim, str[i]) == NULL) {
             i++;
         }
     }
