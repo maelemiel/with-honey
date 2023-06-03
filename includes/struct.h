@@ -11,7 +11,7 @@ typedef struct parser {
     struct Recipe *recipe;
     struct Ingredient *ingredient;
     struct Steps *steps;
-    int *nb_of_file;
+    int nb_of_file;
 } parser_t;
 
 struct Recipe {
