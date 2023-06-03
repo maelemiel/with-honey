@@ -7,13 +7,14 @@
 
 #include <stdio.h>
 #include "honey.h"
+#include "struct.h"
 
-int manage_args(int ac, char** av)
+int manage_args(int ac, char** av, parser_t *parser)
 {
     verif_args(ac);
     print_help(av);
     print_honey(av);
-    check_file_in_the_folder("./recipes");
+    check_file_in_the_folder("./recipes", parser);
     return 0;
 }
 
