@@ -21,3 +21,5 @@ int manage_args(int ac, char** av, parser_t *parser);
 int print_honey(char **av);
 int parse_file(char *file, char *path_folder, parser_t *parser);
 int parse_string(char *buffer);
+char **split_string(const char *str, const char* delim);
+int my_count_words(const char *str, const char *delim);
