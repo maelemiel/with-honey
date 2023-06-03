@@ -14,6 +14,7 @@ static void init_struct(parser_t *parser)
 {
     parser->recipe = malloc(sizeof(struct Recipe));
     parser->ingredient = malloc(sizeof(struct Ingredient));
+    parser->nb_of_file = 0;
     parser->recipe->name = NULL;
     parser->recipe->type = NULL;
     parser->recipe->difficulty = NULL;
@@ -34,6 +35,6 @@ int main(int ac, char** av)
 {
     parser_t *parser = malloc(sizeof(parser_t));
     init_struct(parser);
-    manage_args(ac, av);
+    manage_args(ac, av, parser);
     return 0;
 }
